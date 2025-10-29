@@ -772,3 +772,12 @@ strong {
   margin-bottom: 1.5rem;
 }
 
+/* HOVER LÉGER SUR TOUTES LES IMAGES */
+img {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+img:hover {
+  transform: scale(1.02); /* très léger zoom */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18); /* ombre douce */
+}
