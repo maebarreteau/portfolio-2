@@ -82,7 +82,11 @@ section h2 {
 .card-list { margin: 2rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
 .card { border-bottom: 1px solid #000; padding-bottom: 1rem; }
 .card-title { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .3rem; }
-.accent { color: #c3201f; }
+.menu a.accent {
+  color: #c3201f;
+  font-weight: 600;
+}
+
 
 .btn {
   --pad-y: .75rem;
@@ -133,3 +137,4 @@ a {
     min-height: 0;
   }
 }
+
