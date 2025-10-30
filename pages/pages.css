@@ -412,6 +412,18 @@ strong {
 }
 
 
+.project-grid .project-card img {
+  width: 100%;
+}
+
+
+.project .project-img {
+  width: clamp(280px, 50%, 600px);
+  display: block;
+  margin: 1.5rem auto;
+}
+
+
 
 .recommendation {
   display: flex;
