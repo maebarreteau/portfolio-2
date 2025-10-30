@@ -421,87 +421,62 @@ strong {
   color: #c3201f;
 }
 
-
 .competences .intro {
-  max-width: 600px;
+  max-width: 700px;
   margin-bottom: 3rem;
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
+.competence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.competence-col h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.8px;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #c3201f;
+  padding-bottom: .3rem;
+}
+
 .skill {
-  max-width: 650px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .skill-name {
-  display: block;
+  font-weight: 600;
   font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .5px;
+  display: block;
   margin-bottom: .4rem;
-  font-size: 1.05rem;
 }
 
 .skill-bar {
-  width: 100%;
-  background: #e5e5e5;      
-  border-radius: 4px;
-  height: 8px;               
-  overflow: hidden;          
-  position: relative;
+  height: 6px;
+  background: #e5e5e5;
+  border-radius: 3px;
+  margin-bottom: .5rem;
+  overflow: hidden;
 }
 
 .skill-bar .fill {
-  background: #c3201f;       
-  height: 100%;              
-  width: 0;                  
-  display: block;            
-  transition: width .6s ease;
-}
-
-
-.skill-bar .fill[data-level] {
-  width: attr(data-level percentage);
-}
-
-.skill-header {
-  display: flex;
-  align-items: center;
-  gap: .6rem;
-  cursor: pointer;
-}
-
-.skill-toggle {
+  height: 100%;
   width: 0;
-  height: 0;
-  border-left: 6px solid #c3201f; 
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  background: none;
-  cursor: pointer;
-  transition: transform .3s ease;
-}
-
-.skill-toggle.open {
-  transform: rotate(90deg);
+  background: #c3201f;
+  border-radius: 3px;
+  transition: width .8s ease;
 }
 
 .skill-desc {
-  display: none;
-  margin-top: .8rem;
-  margin-bottom: .8rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  max-width: 600px;
-  opacity: 0;
-  transition: opacity .3s ease;
+  font-size: .95rem;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
-.skill-desc.show {
-  display: block;
-  opacity: 1;
-}
 
 
 .experiences .intro {
@@ -594,13 +569,56 @@ strong {
   opacity: 0.7;
 }
 
-.archive-card h3 {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  margin: 0 0 .3rem 0;
-  font-size: 1.4rem;
+.archive-card {
+  border: 1px solid #000;
+  background: #fafafa;
+  margin-bottom: 2rem;
+  padding: 0;
+  overflow: hidden;
 }
+
+.accordion-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 2rem;
+  cursor: pointer;
+}
+
+.accordion-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  fill: #c3201f; 
+  transition: transform .3s ease;
+}
+
+
+.arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+
+.archive-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  transition: max-height .4s ease, padding .3s ease;
+}
+
+.archive-content.open {
+  max-height: 1000px;
+  padding: 1rem 2rem 1.8rem;
+}
+
 
 .archive-place {
   font-style: italic;
@@ -780,4 +798,55 @@ img {
 img:hover {
   transform: scale(1.02); /* très léger zoom */
   box-shadow: 0 4px 12px rgba(0,0,0,0.18); /* ombre douce */
+}
+
+.univers h2 {
+  margin-bottom: 1rem;
+}
+
+.univers .intro {
+  max-width: 650px;
+  margin-bottom: 3rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.grid-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.cat-card {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  position: relative;
+}
+
+.cat-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border: 1px solid #000;
+  display: block;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cat-card img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.cat-card span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,.9);
 }
