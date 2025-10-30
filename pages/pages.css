@@ -830,7 +830,6 @@ strong {
   margin-bottom: 1.5rem;
 }
 
-/* HOVER LÉGER SUR TOUTES LES IMAGES */
 img {
   transition: transform .25s ease, box-shadow .25s ease;
 }
@@ -889,5 +888,43 @@ img:hover {
   letter-spacing: 1px;
   color: white;
   text-shadow: 0 0 8px rgba(0,0,0,.9);
+}
+
+.map-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+#map {
+  width: 100%;
+  height: 380px;
+  border: 2px solid #000;
+}
+
+#place-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: .95rem;
+}
+
+#place-list li {
+  padding: .6rem .4rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+#place-list li:hover {
+  background: #f3f3f3;
+}
+
+#place-list li.active {
+  background: #c3201f;
+  color: white;
+  font-weight: 600;
 }
 

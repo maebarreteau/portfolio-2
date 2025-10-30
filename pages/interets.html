@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="pages.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Crimson+Text:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../images/icone.webp">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
 
 </head>
 <body>
@@ -116,18 +118,35 @@
     
     <section class="capsules">
       <article class="capsule">
-        <h4>Mes adresses préférées à Clermont-Ferrand</h4>
-        <p>La coopérative de mai, Le Lieu-Dit, Les Volcans, Momie manga, Le Grenier des Chimères, Le Baraka</p>
+        <h4>Pourquoi le rap ?</h4>
+        <p>C'est une passion que je partage avec mon père. Je lui volais ses cd d'IAM et de Doc Gynéco quand j'étais petite. Plus tard, je me suis construite avec mes propres références. J'aime l'engagement, les instrumentales folles et les voix qui les découpent avec rage.</p>
       </article>
       <article class="capsule">
         <h4>Le monde associatif & moi</h4>
-        <p>C'est un univers important à mes yeux qui permet de faire vivre la culture. J'aime y participer et me sentir utile à une cause qui m'est chère.</p>
+        <p>C'est un univers important à mes yeux qui permet de faire vivre la culture. J'aime y participer et me sentir utile à une cause qui m'est chère. Je suis dans trois associations différentes liées à la culture, c'est un plaisir de pouvoir travailler avec des personnes passionnées.</p>
       </article>
       <article class="capsule">
         <h4>Le monde indépendant</h4>
-        <p>J'aime tout ce qui est fait à la main, tout ce qui peut paraître un peu brouillon tant que c'est fait avec amour.</p>
+        <p>J'aime tout ce qui est fait à la main, tout ce qui peut paraître un peu brouillon tant que c'est fait avec amour. J'aime les vêtements indépendants, les artistes sans labels, le cinéma qui doit batailler pour trouver des aides financières...</p>
       </article>
     </section>
+
+   <h2>Carte affective de Clermont-Ferrand</h2>
+
+<section class="map-layout">
+  <div id="map"></div>
+
+  <ul id="place-list">
+    <li data-place="Momie Manga">Momie Manga — se perdre entre les étalages</li>
+    <li data-place="Le Lieu-Dit">Le Lieu-Dit — sans cesse de nouvelles découvertes</li>
+    <li data-place="Le Baraka Shop/Bar">Le Baraka Shop/Bar — des jeux à ne plus savoir à quoi jouer</li>
+    <li data-place="Les Volcans">Les Volcans — ma librairie coup de cœur</li>
+    <li data-place="Le Grenier des Chimères">Le Grenier des Chimères — partir dans de nouveaux univers</li>
+    <li data-place="La Coopérative de Mai">La Coopérative de Mai — là où la musique gagne</li>
+  </ul>
+</section>
+
+
 
 
     <h2>Mes inspirations</h2>
@@ -139,5 +158,8 @@
       <a class="badge" href="https://www.streetpress.com" target="_blank" rel="noopener">StreetPress</a>
     </section>
   </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="pages.js"></script>
 </body>
 </html>
